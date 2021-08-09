@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<title>Churrascaria/reservas</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+        <script type="text/javascript" language="javascript">
+		function cadastro(){ 
+	var nome = document.frmPrincipal.txtNome.value;
+	var telefone = document.frmPrincipal.txtTelefone.value;
+	var eMasculino = document.getElementById("rbtMasculino").checked;
+	var eFeminino = document.getElementById("rbtFeminino").checked;
+	var mesa = document.frmPrincipal.cmbMesa.value;
+	var prato1 = document.getElementById("chkPrato1").checked;
+	var prato2 = document.getElementById("chkPrato2").checked;
+	
+	
+	if(nome == "") {
+		alert("Campo 'Nome' deve ser preenchido.");
+		document.frmPrincipal.txtNome.focus();
+		return false
+	}
+	
+	if(!isNaN(nome)) {
+		alert("Campo 'Nome' não pode conter 'numeros'");
+		document.frmPrincipal.txtNome.focus();
+		return false
+		
+	}
+	
+	if(telefone == "") {
+		alert("Campo 'Telefone' deve ser preenchido");
+		document.frmPrincipal.txtIdade.focus();
+		return false
+		
+	}
+	
+	
+	if(isNaN(telefone)) {
+		alert("Campo 'Telefone' deve conter apenas numeros");
+		document.frmPrincipal.txtTelefone.focus();
+		return false
+		
+	}
+
+	if(!eMasculino && !eFeminino) {
+		alert("Campo 'Sexo' deve ser preenchido");
+		document.frmPrincipal.rdtSexo.focus();
+		return false
+	}
+		
+	if(mesa == "0"){
+		alert("favor selecionar o campo mesa!!");
+		document.frmPrincipal.cmbEstado.focus();
+		return false
+		
+	}
+	
+	if(!prato1 && !prato2) {
+		alert("Campo 'Prato' deve ser preenchido");
+		document.frmPrincipal.rdtSexo.focus();
+		return false
+	}
+	return true
+	
+}
+
+function enviar() {
+	if(cadastro()) { // validar == true
+		alert("formulario confirmado, agradecemos a sua preferencia!");
+		
+	}
+	
+
+	
+
+	return true
+}
+
+		</script>
+			</head>
+            <body>
+						<div id="centro">		
+						<table border="0" valign="top">
+							<form name="frmPrincipal" >
+								<tr>
+									<td align="right">Nome Completo:</td>
+									<td><input type="text" size="30" name="txtNome" /> </td>
+								</tr>
+								<tr>
+									<td align="right">Telefone:</td>
+									<td><input type="text" name="txtTelefone" size="8" maxlength="8" ></td>
+								</tr>
+                                	<tr>
+								
+							
+									<td align="right">Sexo</td>
+									<td>
+										<input type="radio" name="rbtSexo" id="rbtMasculino"/>Masculino<br />
+    									<input type="radio" name="rbtSexo" id="rbtFeminino"/>Feminino</td>
+								</tr>
+           
+                            	<tr>
+									<td align="right">Mesa:</td>
+									<td>
+                                    	<select name="cmbMesa"  >
+        									<option value="0" >mesa para quantos</option>
+              								<option value="1" >para 3</option>
+							                <option value="2" >para 7</option>
+                                            <option value="3" >para 10</option>
+                                            <option value="3" >mais de 10</option>
+							            </select>
+                                    </td>
+								</tr>
+                                  <tr>
+                               <td align="right">prato 1</td><td><input name="chkPrato" type="checkbox" id="chkPrato1"/></td></tr>
+                                <td align="right">prato 2</td><td><input name="chkPrato" type="checkbox" id="chkPrato2"/></td></tr>
+                                </tr>
+                                <tr>
+                                </tr>
+								<tr>
+									<td colspan="2">
+									<br/><input type="button" value="Confirmar" onClick="enviar();" />
+                                    <input type="reset" value="Apagar" onClick="apagar()" />
+									</td>
+								</tr>
+                               </form>
+                               </table>
+					
+                    </div>
+					</body>
+</html>

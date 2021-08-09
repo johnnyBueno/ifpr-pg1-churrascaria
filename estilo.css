@@ -1,0 +1,112 @@
+
+
+a.botao  { /* Link normal */
+	background: url(img/contato.png) no-repeat 0 0;
+	width: 186px;
+	height: 52px;
+	display: block;
+}
+
+a.botao:hover { /* Ponteiro do mouse sobre o link */
+	background-position: 0 -52px;
+}
+
+a.botao:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+a.botaoeventos  { /* Link normal */
+	background: url(img/eventos.png) no-repeat 0 0;
+	width: 186px;
+	height: 52px;
+	display: block;
+}
+
+a.botaoeventos:hover { /* Ponteiro do mouse sobre o link */
+	background-position: 0 -52px;
+}
+
+a.botaoeventos:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+a.botao:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+a.botaoreservas  { /* Link normal */
+	background: url(img/reservas.png) no-repeat 0 0;
+	width: 186px;
+	height: 52px;
+	display: block;
+}
+
+a.botaoreservas:hover { /* Ponteiro do mouse sobre o link */
+	background-position: 0 -52px;
+}
+
+a.botaoreservas:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+a.botao:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+a.botaoinicio  { /* Link normal */
+background: url(img/inicio.png) no-repeat 0 0;
+	width: 186px;
+	height: 52px;
+	display: block;
+}
+
+a.botaoinicio:hover { /* Ponteiro do mouse sobre o link */
+	background-position: 0 -52px;
+}
+
+a.botaoinicio:active { /* Link no momento do click */
+	background-position: 0 -104px;
+}
+
+ body {
+	background-color:#FFF;
+	
+}
+
+#container {
+	margin:auto;
+	width:800px;
+	
+}
+
+#header {
+	width:800px;
+}
+
+#barra {
+	width:800px; 
+	height:20px; 
+	background:#FF0;
+}
+
+#esquerda {
+	float:left;
+	width:190px;
+}
+
+#centro {
+	float:left;
+	width:350px;
+}
+
+#direita {
+	float:left;
+	width:260px;
+}
+
+#footer {
+	clear:both;
+}
+
+
+
